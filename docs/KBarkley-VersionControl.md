@@ -39,7 +39,7 @@ List the correct Terminal commands to do the actions listed below. Replace **CMD
 
 **Folder Drop:** Try typing "cd" followed by a space, and then drag a folder into terminal and press return. Test this out and describe your results below.
 
-[ Describe Results Here ]
+[ When attempting  the drag-and-drop action in the Visual Studio intergrated Developer PowerShell, the terminal did not accept direct drag-and-drop input from File Explorer. Instead copying the folder path and pasting it after `cd` ( cd C:\FS\COS\Sovereign-Simulation\images ) successfully updated the active working directory. ]
 
 ## Topic: Version Control & Git
 
