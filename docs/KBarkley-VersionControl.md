@@ -23,17 +23,17 @@ List the correct Terminal commands to do the actions listed below. Replace **CMD
 
 **The last bullet provides an example**.
 
-- [ CMD ]: Clear the Screen
-- [ CMD ]: Print the "Working Directory"
-- [ CMD ]: List files and folders
-- [ CMD ]: List files and folders, including invisible files
-- [ CMD ]: List all files and folders, in human readable form
-- [ CMD ]: Change directory
-- [ CMD ]: Change directory, go to root directory
-- [ CMD ]: Change directory and go to user home directory
-- [ CMD ]: Change directory, go up one folder level
-- [ CMD ]: Change directory, go up two folder levels
-- [ CMD ]: Change directory to my desktop!
+- [ `clear` ]: Clear the Screen
+- [ `pwd` ]: Print the "Working Directory"
+- [ `ls` ]: List files and folders
+- [ `ls -a` ]: List files and folders, including invisible files
+- [ `ls -lh` ]: List all files and folders, in human readable form
+- [ `cd <folders>` ]: Change directory
+- [ `cd /` ]: Change directory, go to root directory
+- [ `cd ~` ]: Change directory and go to user home directory
+- [ `cd ..` ]: Change directory, go up one folder level
+- [ `cd ../..` ]: Change directory, go up two folder levels
+- [ `cd ~/Desktop` ]: Change directory to my desktop!
 
 **2. Using Terminal...**
 
