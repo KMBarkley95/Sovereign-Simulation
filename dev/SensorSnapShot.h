@@ -1,6 +1,7 @@
 #pragma once
+
 // Struct to hold the telemetry data sent via the simulated LiFi laser beam
-struct SensorSnapShot
+struct SensorSnapshot
 {
 	float waveKineticEnergy;
 	int stormCategory;
