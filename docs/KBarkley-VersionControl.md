@@ -23,23 +23,23 @@ List the correct Terminal commands to do the actions listed below. Replace **CMD
 
 **The last bullet provides an example**.
 
-- [ CMD ]: Clear the Screen
-- [ CMD ]: Print the "Working Directory"
-- [ CMD ]: List files and folders
-- [ CMD ]: List files and folders, including invisible files
-- [ CMD ]: List all files and folders, in human readable form
-- [ CMD ]: Change directory
-- [ CMD ]: Change directory, go to root directory
-- [ CMD ]: Change directory and go to user home directory
-- [ CMD ]: Change directory, go up one folder level
-- [ CMD ]: Change directory, go up two folder levels
-- [ CMD ]: Change directory to my desktop!
+- [ `clear` ]: Clear the Screen
+- [ `pwd` ]: Print the "Working Directory"
+- [ `ls` ]: List files and folders
+- [ `ls -a` ]: List files and folders, including invisible files
+- [ `ls -lh` ]: List all files and folders, in human readable form
+- [ `cd <folders>` ]: Change directory
+- [ `cd /` ]: Change directory, go to root directory
+- [ `cd ~` ]: Change directory and go to user home directory
+- [ `cd ..` ]: Change directory, go up one folder level
+- [ `cd ../..` ]: Change directory, go up two folder levels
+- [ `cd ~/Desktop` ]: Change directory to my desktop!
 
 **2. Using Terminal...**
 
 **Folder Drop:** Try typing "cd" followed by a space, and then drag a folder into terminal and press return. Test this out and describe your results below.
 
-[ Describe Results Here ]
+[ When attempting  the drag-and-drop action in the Visual Studio intergrated Developer PowerShell, the terminal did not accept direct drag-and-drop input from File Explorer. Instead copying the folder path and pasting it after `cd` ( cd C:\FS\COS\Sovereign-Simulation\images ) successfully updated the active working directory. ]
 
 ## Topic: Version Control & Git
 
@@ -47,40 +47,47 @@ Version control, also known as revision control, records changes to a file or se
 
 **1. There are three types of version control.**
 
-[ Name & describe the three types of version control here.]
+[ Local, Centralized, and Distributed are the three tyoes of Version Control.
+Local Version Control, is a system where data is only stored one location.
+Centralized Version Control--also know as CVCS-- is a  single central server holds the data for others to look at the working copies from it.
+Distributed Version Control--lso know as DVCS-- is where you or others can clone a full copy of the repository onto ones own computer.]
 
 **2. Using Terminal, there are also essential Git commands to know.**
 
 List the correct Git commands to do the actions listed below in Terminal. Replace CMD with the correct command and keep or enhance the brief description.
 
-- [ CMD ]: Clone a repository
-- [ CMD ]: Set-up a global user name
-- [ CMD ]: Set-up a global email address (to match my GitHub account email)
-- [ CMD ]: Shows the current state of your directory and staging area
-- [ CMD ]: Add modified files to the next commit
-- [ CMD ]: Make a commit with a new message
-- [ CMD ]: Show my commit history
-- [ CMD ]: Show Git's help screen
+- [ `git clone <url>` ]: Clone a repository
+- [ `git config --global user.name "Name"` ]: Set-up a global user name
+- [ `git config --global user.email "mail"` ]: Set-up a global email address (to match my GitHub account email)
+- [ `git status` ]: Shows the current state of your directory and staging area
+- [ `git add <file>` ]: Add modified files to the next commit
+- [ `git commit -m "Message"` ]: Make a commit with a new message
+- [ `git log` ]: Show my commit history
+- [ `git help` ]: Show Git's help screen
 
 **3. Connecting to GitHub using Terminal.**
 HTTPS is the the correct way to connect to GitHub in this course. Describe how you connect to GitHub from Terminal using this protocol. What steps do you take?
 
-[ Describe the steps to connect Terminal to a GitHub repo here ]
+[ There are three approaches to that Git uses to securely connect with remote repositories, but if we are strictly using HTTPS, we have 3 key steps.
+Step 1: Clone the Repository; if it is private, you will be prompted for your username and password.
+Step 2: Generate a Personal Access Token--also know as--PAT
+Step 3: Authenticate Using the PAT; when prompted paste your PAT for the password, your PAT is you temp password, and Git will only remeber the PAT for the duration of your session.
+Step 4: Cache the Credentials, is where you can cache your credentials to avoid re-entering your PAT]
 
 **4. Using .gitignore and Why it's Important**  
 Most repositories contain a .gitignore file.
 
 - What is the purpose of this file?
   <br>
-  [Fill in answer here]
+  [Prevents tracking of sensitive files, and keeps the repository manageable.]
 
 - What is the "**.DS_Store**" file and why would you want to ignore it?
   <br>
-  [Fill in answer here]
+  [It would seem, that it is just clutter, or unessary, but is automatically created on macOS.]
 
 - What other file or folder would you want to add to a .gitignore file and why?
   <br>
-  [Fill in answer here]
+  [From reading many articals, it would seem the best reason you would want to add .gitignore is, it helps keep a log of the files you want to keep that could be sensitive, like personal, or temporary files. it is also benifical to keep certain content secure from anyone accessing your repository, like a new addtion to a game or pernal information tracked by the git.]
 
 <br>
 
@@ -91,16 +98,17 @@ Replace the example references below with your own links and recommended resourc
 [ Research Summary: What resource(s) did you find most helpful this past week and why? ]
 
 **Terminal Commands**  
-[Site Address](https://www.someaddress.com/full/url/)
+[GitHub](https://gist.github.com/cferdinandi/ef665330286fd5d7127d)
 
 **Three Types of Version Control**  
-[Site Address](https://www.someaddress.com/full/url/)
+[Coders Nexus](https://codersnexus.com/tutorials/github-complete-course/types-of-version-control-local-centralized-distributed)
 
 **Git Commands**  
-[Site Address](https://www.someaddress.com/full/url/)
+[Geeks for Geeks](https://www.geeksforgeeks.org/git/git-cheat-sheet/)
 
 **Connecting to GitHub using Terminal**  
-[Site Address](https://www.someaddress.com/full/url/)
+[Geeks for Geeks](https://www.geeksforgeeks.org/git/how-to-login-using-the-git-terminal/)
 
 **Using .gitignore and Why it's Important**  
-[Site Address](https://www.someaddress.com/full/url/)
+[Site Address](https://www.geeksforgeeks.org/git/what-is-git-ignore-and-how-to-use-it/
+https://glossary.iboysoft.com/ds-store.html)
