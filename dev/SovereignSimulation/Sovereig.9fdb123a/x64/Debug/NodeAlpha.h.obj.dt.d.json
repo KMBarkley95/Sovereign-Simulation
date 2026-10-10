@@ -1,0 +1,12 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\fs\\cos\\sovereign-simulation\\dev\\nodealpha.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\fs\\cos\\sovereign-simulation\\dev\\sensorsnapshot.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
