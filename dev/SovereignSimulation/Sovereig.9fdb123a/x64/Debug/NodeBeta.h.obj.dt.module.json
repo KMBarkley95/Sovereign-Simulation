@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Sovereig.9fdb123a\\x64\\Debug\\NodeBeta.obj",
+            "outputs": [
+                "Sovereig.9fdb123a\\x64\\Debug\\NodeBeta.h.obj.dt.module.json",
+                "Sovereig.9fdb123a\\x64\\Debug\\NodeBeta.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

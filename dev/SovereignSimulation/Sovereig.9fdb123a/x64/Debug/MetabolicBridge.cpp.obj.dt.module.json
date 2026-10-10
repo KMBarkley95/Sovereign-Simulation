@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Sovereig.9fdb123a\\x64\\Debug\\MetabolicBridge.obj",
+            "outputs": [
+                "Sovereig.9fdb123a\\x64\\Debug\\MetabolicBridge.cpp.obj.dt.module.json",
+                "Sovereig.9fdb123a\\x64\\Debug\\MetabolicBridge.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
