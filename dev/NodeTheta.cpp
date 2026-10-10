@@ -6,7 +6,7 @@ NodeTheta::NodeTheta() {
     totalArchivedRecords = 0;
 }
 
-// Cloaked DeepSafeVault: Acts as a benign data logger for academic purposes
+// Acts as a benign data logger for academic purposes
 void NodeTheta::secureArchive(std::string alertData) {
     totalArchivedRecords++;
     std::cout << "[Node Theta] Archiving telemetry to secure terrestrial data sanctuary...\n";
