@@ -13,3 +13,4 @@ public:
 	void receiveLiFiData(SensorSnapshot incomingData);
 	std::string triggerEvacProtocol();
 };
+// Added NodeTheta for the third class.
