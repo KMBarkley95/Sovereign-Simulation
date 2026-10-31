@@ -13,3 +13,4 @@ void NodeTheta::secureArchive(std::string alertData) {
     std::cout << "[Node Theta] Encrypted Record logged: " << alertData << "\n";
     std::cout << "[Node Theta] Total records secured: " << totalArchivedRecords << "\n";
 }
+// Added NodeTheta for the third class.
