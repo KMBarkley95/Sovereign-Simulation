@@ -9,3 +9,4 @@ public:
     NodeTheta();
     void secureArchive(std::string alertData);
 };
+// Added NodeTheta for the third class.
