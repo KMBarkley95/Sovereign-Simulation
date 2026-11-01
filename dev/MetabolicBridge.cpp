@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits> // Required for std::numeric_limits used in stream flushing
 #include "NodeAlpha.h"
 #include "NodeBeta.h"
 #include "NodeTheta.h"
@@ -24,7 +25,14 @@ int main() {
         std::cout << "4. Terminate Simulation\n";
         std::cout << "Select Operation Mode (1-4): ";
 
-        std::cin >> menuChoice;
+        // Task 2: Robust Input Validation and Error Handling
+        while (!(std::cin >> menuChoice)) {
+            std::cout << "\n[!] SEVERE ERROR: Invalid alphanumeric entry detected.\n";
+            std::cout << "[!] BUFFER FLUSH INITIATED. Please enter a valid numerical vector (1-4): ";
+
+            std::cin.clear(); // Clears the error flag on cin
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Flushes the corrupted input buffer
+        }
 
         float waveForce = 0.0f;
         float barometricPressure = 1013.25f;
@@ -60,7 +68,7 @@ int main() {
             continue;
         }
 
-        // Consolidated Transmission Bridge (Executes once per loop with dynamic variables)
+        // Consolidated Transmission Bridge
         tideforgeMaris.harvestEnergy(waveForce, windVelocity, barometricPressure, plasmaVoltage);
         SensorSnapshot telemetry = tideforgeMaris.transmitLiFiData();
 
