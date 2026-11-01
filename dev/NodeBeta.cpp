@@ -6,6 +6,7 @@ NodeBeta::NodeBeta() {
     isConnectedToAlpha = false;
     alertLevel = 0;
     evacuationRoute = "Nominal. No evacuation required.";
+    nswBroadcastStream = "NWS STANDBY: All regional sectors operating under normal telemetry parameters.";
 }
 
 // Ingests the telemetry payload from Node Alpha
@@ -42,7 +43,34 @@ std::string NodeBeta::triggerEvacProtocol() {
     // Save state internally
     evacuationRoute = activeProtocol;
 
-    std::cout << "[Node Beta] Broadcasting Early Warning Protocol...\n";
+    std::cout << "[Node Beta] Broadcasting Early Warning Protocol... " << activeProtocol << "\n";
+
+    // Automatically serialize into the continuous NWS stream upon protocol trigger
+    formatNWSBroadcastFeed();
 
     return activeProtocol; // Single return at the absolute bottom
+}
+
+// Task 5: Serializes telemetry and alerts into a continuous National Weather Service broadcast feed
+void NodeBeta::formatNWSBroadcastFeed() {
+    std::string broadcastPacket; // Vessel variable declared at the top
+
+    if (alertLevel >= 5) {
+        broadcastPacket = "NWS EMERGENCY BULLETIN [PRIORITY ZERO]: Severe hurricane and plasma ion-mass surge detected. Mandatory evacuation orders in effect for coastal sectors.";
+    }
+    else if (alertLevel >= 4) {
+        broadcastPacket = "NWS WEATHER ADVISORY: Structural wind stall thresholds breached. High-profile transit restricted.";
+    }
+    else if (alertLevel >= 1) {
+        broadcastPacket = "NWS GALE WARNING: Severe storm conditions active. Harbor security and asset lockdown recommended.";
+    }
+    else {
+        broadcastPacket = "NWS STATUS REPORT: Regional atmospheric monitoring nominal. No active warnings.";
+    }
+
+    nswBroadcastStream = broadcastPacket;
+
+    std::cout << "\n================ NWS BROADCAST FEED ================\n";
+    std::cout << nswBroadcastStream << "\n";
+    std::cout << "====================================================\n\n";
 }

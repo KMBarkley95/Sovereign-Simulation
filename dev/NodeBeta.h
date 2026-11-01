@@ -4,13 +4,14 @@
 
 class NodeBeta {
 private:
-	bool isConnectedToAlpha;
-	int alertLevel;
-	std::string evacuationRoute;
+    bool isConnectedToAlpha;
+    int alertLevel;
+    std::string evacuationRoute;
+    std::string nswBroadcastStream;
 
 public:
-	NodeBeta();
-	void receiveLiFiData(SensorSnapshot incomingData);
-	std::string triggerEvacProtocol();
+    NodeBeta();
+    void receiveLiFiData(SensorSnapshot incomingData);
+    std::string triggerEvacProtocol();
+    void formatNWSBroadcastFeed();
 };
-// Added NodeTheta for the third class.
